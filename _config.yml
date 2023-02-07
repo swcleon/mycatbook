@@ -18,7 +18,7 @@ cusdis:
 
 user:
   name: EggPlant
-  pic: /assets/img/young_eggplant.jpg
+  pic: /assets/img/cat1.jpg
   picAlt: "EggPlant"
   job: A siamese cat.
   aboutme: false # comment this out if you don't need the 'about' page.
