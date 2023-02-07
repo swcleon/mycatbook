@@ -8,6 +8,12 @@ comments: true
 
 ## Text Data Augmentations
 
+### Symbolic
+
+### Neural
+
+### Label
+
 ## Generalization
 
 ## Image vs Text
