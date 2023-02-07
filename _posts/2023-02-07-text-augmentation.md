@@ -6,22 +6,13 @@ comments: true
 
 [shorten et al. Journal of Big Data (2021)8:101.](https://doi.org/10.1186/s40537-021-00492-0)
 
-## Text Data Augmentations
-
-Strategies to prevent overfitting via regularization.
-
-### Symbolic
+## 1. Symbolic
 
 Great interpretability for human designers. Works better with short transformations, such as replacing words or phrases, but limited in applying global transformations such as augmenting entire sentences or paragraphs.
 
-#### Rule-based
+### 1.1 Rule-based
 
-| Easy Data Augmentation (EDA) | Example |
-| --- | --- |
-| **Random Swap** | I am jogging -> I tiger jogging |
-| **Random Insertion** | I am jogging -> I am salad jogging |
-| **Random Deletion** | I am jogging -> I jogging |
-| **Random Synonym Replacement** | I am jogging -> I am running |
+![Easy Data Augmentations](..\assets\img\easy_data_augmentation.jpg)
 
 EDA is relatively easy to use off-the-shelf. Particularly, **Random Swap** is good for introducing semantic invariances, e.g., "I am jogging" is much more similar to "I am swimming" than "I am yelling".
 
@@ -29,7 +20,7 @@ Another rule-based strategy is **Regex Augmentation**, one of the most common wa
 
 Some other strategies like **Inversion** and **Passivization** rely on syntactic heuristics.
 
-#### Graph-structured
+### 1.2 Graph-structured
 
 > A topological space is a more general mathematical space with less constraints than Euclidean or metric spaces.
 
@@ -39,11 +30,11 @@ A Knowledge graph with "is equivalent" relationships is suitale for implementing
 
 The augmentation of these auxilliary graphs may be benefitial as well.
 
-#### MixUp
+### 1.3 MixUp
 
 This strategy describes forming new examples by meshing existing examples together, sometimes blending the labels as well. It varies by how the samples are interpolated, that is, at what levels of granularity (word, sentence, etc.).
 
-#### Feature space
+### 1.4 Feature space
 
 This strategy describes augmenting data in the intermediate representation space of Deep Neural Networks. It isolates intermediate features and apply noise (e.g. standard, gaussian, etc.) to form new data instances. Some popular implementations of feature space augmentation are presented in the figure below:
 
@@ -56,6 +47,18 @@ This strategy describes augmenting data in the intermediate representation space
 
 Feature space augmentations also include **Differentiable Data Augmentation**, which acts as a module that let gradient signals pass through itself.
 
-### Neural
+## 2. Neural
 
-### Label
+The following augmentations rely on auxiliary neural networks to generate new training data.
+
+### 2.1. Back-translation
+
+This strategy describes translating text from one language to another and then back from the translation to the original language. It leverages the semantic invariances encoded in supervised translation datasets to produce semantic invariances for the sake of augmentation. In machine translation, this is a convenient way to obtain a sizable parallel corpus.
+
+### 2.2. Style
+
+This strategy describes transferring the writing style of one author to another for applications such as abstractive summarization or context for extractive question answering, which offers an interesting window to extract semantic similarities between writing styles.
+
+### 2.3. Generative
+
+### 3. Label
