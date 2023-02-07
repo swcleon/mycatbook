@@ -20,8 +20,8 @@ user:
   name: EggPlant
   pic: /assets/img/cat.jpg
   picAlt: "EggPlant"
-  job: A siamese cat pursuing a PhD degree in Computer Science.
-  aboutme: true # comment this out if you don't need the 'about' page.
+  job: A siamese cat.
+  aboutme: false # comment this out if you don't need the 'about' page.
 
 exclude:
   - README.md
