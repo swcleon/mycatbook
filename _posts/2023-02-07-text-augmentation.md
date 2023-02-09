@@ -12,7 +12,7 @@ Great interpretability for human designers. Works better with short transformati
 
 ### 1.1 Rule-based
 
-![Easy Data Augmentations](..\assets\img\easy_data_augmentation.jpg)
+![Easy Data Augmentations](../assets/img/2023-02-07-text-augmentation/easy_data_augmentation.jpg)
 
 EDA is relatively easy to use off-the-shelf. Particularly, Random Swap is good for introducing semantic invariances, e.g., "I am jogging" is much more similar to "I am swimming" than "I am yelling".
 
@@ -38,7 +38,7 @@ This strategy describes forming new examples by meshing existing examples togeth
 
 This strategy describes augmenting data in the intermediate representation space of Deep Neural Networks. It isolates intermediate features and apply noise (e.g. standard, gaussian, etc.) to form new data instances. Some popular implementations of feature space augmentation are presented in the figure below:
 
-![Directions for feature space augmentation explored in MODALS](..\assets\img\feat_aug_modals.jpg)
+![Directions for feature space augmentation explored in MODALS](../assets/img/2023-02-07-text-augmentation/feat_aug_modals.jpg)
 
 - **Hard example interpolation (a)** forms a new example by moving it in the direction of existing embeddings that lie on the decision boundary for classifcation.
 - **Hard example extrapolation (b)** describes moving existing examples along the same angle they currently lie from the mean vector of the class boundary.
