@@ -20,7 +20,7 @@ user:
   name: EggPlant Dan
   pic: /assets/img/young_eggplant.jpg
   picAlt: "EggPlant Dan"
-  job: A noble siamese cat, living and pursuing her doctoral degree in the cozy subtropical monsoon climate, attempts to teach machines about hooman languages ψ(｀∇´)ψ.
+  job: A noble siamese cat attempts to get her PhD in teaching machines about hooman languages ψ(｀∇´)ψ.
   aboutme: false # comment this out if you don't need the 'about' page.
 
 exclude:
