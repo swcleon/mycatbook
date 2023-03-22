@@ -18,7 +18,7 @@ Both types require training training models from scratch. This work converts the
 
 ## Method
 
-Given a user with viewed item sequence 
+Given a user with viewed item sequence
 
 $$[x_1, x_2, \dots, x_{t-1}]$$
 
@@ -26,13 +26,13 @@ we want to predict the probability distribution of the next item
 
 $$p(x_t|x_1,\dots,x_{t-1})$$
 
-In LMRecSys, we first map each item to its tokenized word description 
+In LMRecSys, we first map each item to its tokenized word description
 
-$$d(x_i) = [w_{i_1}, w_{i_2},\dots,w_{i_L}]$$ 
+$$d(x_i) = [w_{i_1}, w_{i_2},\dots,w_{i_L}]$$
 
-and use a prompt $$f(\cdot)$$ to convert the item sequence into the text sequence 
+and use a prompt $$f(\cdot)$$ to convert the item sequence into the text sequence
 
-$$c = f([d(x_1), d(x_2),\dots,d(x_{t-1})])$$ 
+$$c = f([d(x_1), d(x_2),\dots,d(x_{t-1})])$$
 
 as the context. We then use the language model to estimate the probability distribution of the next item by multi-token inference, which has the following challenges:
 
